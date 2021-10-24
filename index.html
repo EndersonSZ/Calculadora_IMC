@@ -1,55 +1,33 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>Formulario</title>
-        <style>
-            body{
-               background-color: cadetblue;
-               text-align: center;
-               
-               height: 100px;
-               line-height: 500px;
-            }
-
-            
-
-        </style>
-
-        <script>
-            function calcularIMC() {
-
-                if(document.getElementById("peso").value ==""){
-                    alert("preencha o peso");
-                }
-                if(document.getElementById("altura").value==""){
-                    alert("preencha o peso");
-                }
-
-                var peso = parseFloat(document.getElementById("peso").value);
-                var altura = parseFloat(document.getElementById("altura").value);
-                var resultado = peso /(altura * altura);
-                alert("seu IMC é:" +resultado);
-                return true;
-            }
-                    
-        </script>
-
-
-
-    </head>
+        <title>IMC</title>
+        <link rel="stylesheet" href="style.css">
+    
+    </head>     
 
     <body>
         <div>
-            <form action="">
-                <label for="">Peso</label>
-                <input type="text" id="peso" name="peso" placeholder="digite o peso">
-                <label for="">Altura</label>
-                <input type="text" id="altura" name="altura" placeholder="digite a altura">
-
-                <button type="submit" onclick="calcularIMC()">Enviar</button>
-                
-            </form>
+            <label for="">Nome</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
         </div>
-        
+
+        <div>
+            <label for=""> <strong>Peso</strong></label>
+            <input type="text" id="peso" name="peso" placeholder="Digite o peso"> 
+        </div>        
+
+        <div>
+            <label for=""> <strong>Altura</strong></label>
+            <input type="text" id="altura" name="altura" placeholder="Digite a altura">       
+        </div>    
+                <button type="submit" onclick="calcularIMC()">Enviar</button>               
+           
+      
+        <script src="Imc.js"></script>
     </body>
 </html>
+
+
+
+  
